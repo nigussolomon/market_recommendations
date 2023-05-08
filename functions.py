@@ -30,7 +30,7 @@ def age_group_recomendations(age_group):
         # Return a recommendation to focus marketing efforts on that product category for that age group
         response = f"We recommend focusing marketing on {categories[top_category-1]} for the {age_groups[age_group - 1]} age group."
     # Return a tuple containing the recommendation message and a None value
-    return response, None
+    return response
 
 
 def gender_recomendations(gender):
@@ -50,7 +50,7 @@ def gender_recomendations(gender):
         # Return a recommendation to focus marketing efforts on that product category for that gender
         response = f"We recommend focusing marketing on {categories[top_category-1]} for {genders[gender - 1]}s"
     # Return a tuple containing the recommendation message and a None value
-    return response, None
+    return response
 
 
 def age_plus_gender_recommendations(gender=None, age_group=None):
@@ -78,7 +78,7 @@ def age_plus_gender_recommendations(gender=None, age_group=None):
         # Get the most popular category among all customers
         top_category = customer_data['ProductCategory'].value_counts().index[0]
         response = f"We recommend focusing marketing on {categories[top_category-1]} for our customers."
-    return response, None
+    return response
 
 
 def product_category_recomendations(category):
@@ -94,4 +94,4 @@ def product_category_recomendations(category):
         top_category2 = category_counts_age_group.index[0]
         # Return recommendation message based on most popular gender and age range
         response = f"We have noticed for {categories[category - 1]} the most popular denomination is, {genders[top_category - 1]}s in the {age_groups[top_category2 - 1]} age group."
-    return response, None
+    return response
